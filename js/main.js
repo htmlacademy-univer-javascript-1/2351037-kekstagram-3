@@ -3,11 +3,9 @@ import { createPublications } from './data.js';
 import './draw.js';
 import { createPictures } from './draw.js';
 import './util.js';
-import { checkMaxLength } from './util.js';
-
-checkMaxLength('hello', 5);
+import './form.js';
+import './validate.js';
 
 const publication = createPublications();
 
 createPictures(publication);
-//Задание 7 часть 2
