@@ -5,6 +5,7 @@ import { createPictures } from './draw.js';
 import './util.js';
 import './form.js';
 import './validate.js';
+import './scale.js';
 
 const publication = createPublications();
 
