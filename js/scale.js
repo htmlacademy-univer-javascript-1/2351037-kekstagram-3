@@ -22,3 +22,8 @@ biggerButton.addEventListener('click', () => {
     imagePreview.style.transform = `scale(${(currentScale + STEP_SCALE) / 100})`;
   }
 });
+
+export const resize = (newScale) => {
+  scale.value = `${newScale}%`;
+  imagePreview.style.transform = `scale(${newScale/100})`;
+};

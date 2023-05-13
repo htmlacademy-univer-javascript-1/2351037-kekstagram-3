@@ -1,8 +1,10 @@
 import {checkMaxLength} from './util.js';
+import {sendData} from './server.js';
 
 const MIN_LEN_COMMENT = 20;
 const MAX_LEN_COMMENT = 140;
 const imageForm = document.querySelector('.img-upload__form');
+
 const pristine = new Pristine(imageForm, {
   classTo: 'img-upload__text',
   errorClass: 'form__item--invalid',
@@ -19,7 +21,8 @@ function validateComment(element) {
 }
 
 imageForm.addEventListener('submit', (evt) => {
-  if (!pristine.validate()) {
-    evt.preventDefault();
+  evt.preventDefault();
+  if (pristine.validate()) {
+    sendData(evt);
   }
 });
